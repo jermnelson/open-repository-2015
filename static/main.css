@@ -5,6 +5,9 @@ body {
 }
 
 
+h2 a {
+  color: #A8A8A8;
+}
 
 .countdown {
   font-size: .85em;

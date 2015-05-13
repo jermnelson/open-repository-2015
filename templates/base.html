@@ -7,13 +7,19 @@
     <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
   </head>
-  <body>
-    <header ng-controller="OR2015AppController as or2015">
+  <body ng-controller="OR2015AppController as or2015">
+    <header>
     {% raw %}
-    <h2>Open Repositories 2015 Fedora Interest Group 3B: Hydra and Others</h2>
+    <h3>Open Repositories 2015 - Fedora Interest Group 3B: Hydra and Others </h3>
+    <h2>Learning to use Fedora 4 as a BIBFRAME Linked Data Platform</h2>
     <h1>{{ or2015.slideCount }}: {{ or2015.slideTitle }} <span class="countdown">{{ or2015.countdown }} seconds</span></h1>
     {% endraw %}
     </header>
+    <div>
+    {% raw %}<button value="Start">Start</button>{% endraw %}
+
+    </div>
+    {% include 'slides/obligatory-shield-ref.html' %}
     {#
     <input type="text" ng-model="slideTitle" placeholder="MISSING Slide Title">
     <input type="text" ng-model="slideCount" placeholder="MISSING Slide Count">
