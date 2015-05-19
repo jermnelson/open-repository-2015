@@ -12,11 +12,14 @@
     {% raw %}
     <h3>Open Repositories 2015 - Fedora Interest Group 3B: Hydra and Others </h3>
     <h2>Learning to use Fedora 4 as a BIBFRAME Linked Data Platform</h2>
-    <h1>{{ or2015.slideCount }}: {{ or2015.slideTitle }} <span class="countdown">{{ or2015.countdown }} seconds</span></h1>
+    <h1>{{ or2015.currentSlide }} of {{ or2015.slideCount }}: {{ or2015.slideTitle }} 
+        <span class="countdown">{{ or2015.countdown }} seconds</span></h1>
+     <button ng-click="goSlide()">Go</button>
+     
     {% endraw %}
     </header>
     <div>
-    {% raw %}<button value="Start">Start</button>{% endraw %}
+    {% raw %}<button ng-click="advanceSlide()">Next</button>{% endraw %}
 
     </div>
     {% include 'slides/obligatory-shield-ref.html' %}
