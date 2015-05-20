@@ -2,27 +2,27 @@ var slides = [
  { title: 'Obligatory S.H.E.I.L.D. Reference'},
  { title: 'Language, Frameworks, Meh!' },
  { title: 'Connecting People and Institutions with Algorithms' },
- { title: 'Slide 4 ' },
- { title: 'Slide 5' },
- { title: 'Slide 6' },
- { title: 'Slide 7' },
- { title: 'Slide 8' },
- { title: 'Slide 9' },
- { title: 'Slide 10' },
- { title: 'Slide 11' },
- { title: 'Slide 12' },
- { title: 'Slide 13' },
- { title: 'Slide 14' },
- { title: 'Slide 15' },
- { title: 'Slide 16' },
- { title: 'Slide 17' },
- { title: 'Slide 18' },
- { title: 'Slide 19' },
- { title: 'Slide 20' },
- { title: 'Slide 21' },
- { title: 'Slide 22' },
- { title: 'Slide 23' },
- { title: 'Slide 24' }
+ { title: 'Traditional Push Processes' },
+ { title: 'Pulling Requirements' },
+ { title: 'Catalog Pull Platform' },
+ { title: 'Linked Data Platform' },
+ { title: 'Semantic Server' },
+ { title: 'Fedora 4 for Named Graphs' },
+ { title: 'BIBFRAME Works & Instances' },
+ { title: 'BIBFRAME Annotations & Authorities' },
+ { title: 'Elasticsearch' },
+ { title: 'Apache Fuskei' },
+ { title: 'Semantic Server REST API' },
+ { title: 'BIBFRAME Datastore' },
+ { title: 'BIBFRAME Datastore Services API' },
+ { title: 'TIGER Catalog' },
+ { title: 'BIBCAT' },
+ { title: 'Islandora eBadges' },
+ { title: 'BIBCAT Reporting Module' },
+ { title: 'Colorado College Website' },
+ { title: 'Why? Why not!' },
+ { title: 'Participating' },
+ { title: 'Thank-you' }
 ];
 
 
@@ -32,21 +32,24 @@ var slides = [
   angular.module('or2015App', [])
    .controller('OR2015AppController', ['$scope', function($scope) {
      $scope.currentSlide = 1;
-
-/*
      $scope.slideCount = slides.length;
      $scope.slideTitle = slides[$scope.currentSlide-1]['title'];
      $scope.countdown = 420;
-*/
-     $scope.goSlide = function() {
-       console.log("In goSlide");
-
-     };
 
      $scope.advanceSlide = function() {
+      if($scope.currentSlide >= $scope.slideCount) {
+          return;
+      }
       $scope.currentSlide += 1;
       $scope.slideTitle = slides[$scope.currentSlide-1]['title'];
-      console.log("In advancedSlide " + $scope.currentSlide + "\n" + $scope.slideTitle);
+      $scope.countdown -= 18;
+     };
+
+     $scope.isActive = function(slide_number) {
+       if(slide_number === $scope.currentSlide) {
+         return true;
+       }
+       return false;
      };
 /*
      for(var i; i<=slides.length; i++) {     
