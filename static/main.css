@@ -13,3 +13,16 @@ h2 a {
   font-size: .85em;
   color: #6b6b6b;
 }
+
+.panel-body {
+  color: #000000;
+}
+
+.panel-body h2, h3{
+  font-weight: bold;
+}
+
+.panel-title {
+ font-weight: bold;
+
+}
