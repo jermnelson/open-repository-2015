@@ -2,7 +2,7 @@
 <html ng-app="or2015App">
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.2/angular.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        
     <script src="{{ url_for('static', filename='main.js') }}"></script>
     <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -31,6 +31,10 @@
     {% include 'slides/connecting-people-and-institutions-with-algorithms.html' %}
     {% include 'slides/traditional-push-processes.html' %}
     {% include 'slides/pulling-requirements.html' %}
+    {% include 'slides/catalog-pull-platform.html' %}
+    {% include 'slides/semantic-server-api-to-linked-data-platform.html' %}
+    {% include 'slides/fedora-4-for-named-graphs.html' %}
+    {% include 'slides/bibframe-works-instances.html' %}
 
     </div>
     {#
@@ -38,5 +42,8 @@
     <input type="text" ng-model="slideCount" placeholder="MISSING Slide Count">
     <input type="text" ng-model="countdown" placeholder="MISSING Slide Countdown">
     #}
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   </body>
 </html>

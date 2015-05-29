@@ -18,7 +18,7 @@ h2 a {
   color: #000000;
 }
 
-.panel-body h2, h3{
+.panel-body h1, h2, h3{
   font-weight: bold;
 }
 
