@@ -1,37 +1,51 @@
 var slides = [
- { title: 'Introduction', filename: 'introduction.html' },
+ { title: 'Introduction', slug: 'introduction' },
  { title: 'Obligatory S.H.I.E.L.D. Reference',
-   filename: 'obligatory-shield-reference.html'},
+   slug: 'obligatory-shield-reference'},
  { title: 'Language, Frameworks, Meh!',
-   filename: 'language-frameworks-meh.html' },
+   slug: 'language-frameworks-meh' },
  { title: 'Connecting People and Institutions with Algorithms',
-   filename: 'connecting-people-and-institutions-with-algorithms.html' },
+   slug: 'connecting-people-and-institutions-with-algorithms' },
  { title: 'Traditional Push Processes',
-   filename: 'traditional-push-processes.html' },
+   slug: 'traditional-push-processes' },
  { title: 'Pulling Requirements',
-   filename: 'pulling-requirements.html' },
+   slug: 'pulling-requirements' },
  { title: 'Catalog Pull Platform',
-   filename: 'catalog-pull-platform.html' },
+   slug: 'catalog-pull-platform' },
  { title: 'Semantic Server API to Linked Data Platform',
-   filename: 'semantic-server-api-to-linked-data-platform.html' },
+   slug: 'semantic-server-api-to-linked-data-platform' },
  { title: 'Fedora 4 for Named Graphs',
-   filename: 'fedora-4-for-named-graphs.html' },
+   slug: 'fedora-4-for-named-graphs' },
  { title: 'BIBFRAME Works & Instances',
-   filename: 'bibframe-works-instances.html' },
- { title: 'BIBFRAME Annotations & Authorities' },
- { title: 'Elasticsearch' },
- { title: 'Apache Fuskei' },
- { title: 'Semantic Server REST API' },
- { title: 'BIBFRAME Datastore' },
- { title: 'BIBFRAME Datastore Services API' },
- { title: 'TIGER Catalog' },
- { title: 'BIBCAT' },
- { title: 'Islandora eBadges' },
- { title: 'BIBCAT Reporting Module' },
- { title: 'Colorado College Website' },
- { title: 'Why? Why not!' },
- { title: 'Participating' },
- { title: 'Thank-you' }
+   slug: 'bibframe-works-instances' },
+ { title: 'BIBFRAME Annotations & Authorities',
+   slug: 'bibframe-annotations-authorities' },
+ { title: 'Elasticsearch',
+   slug: 'elasticsearch' },
+ { title: 'Apache Fuskei',
+   slug: 'apache-fuskei' },
+ { title: 'Semantic Server REST API',
+   slug: 'semantic-server-api-to-linked-data-platform' },
+ { title: 'BIBFRAME Datastore',
+   slug: 'bibframe-datastore' },
+ { title: 'BIBFRAME Datastore Services API',
+   slug: 'bibframe-datastore-services-api' },
+ { title: 'TIGER Catalog',
+   slug: 'tiger-catalog' },
+ { title: 'BIBCAT',
+   slug: 'bibcat' },
+ { title: 'Islandora eBadges' ,
+   slug: 'islandora-ebadges'},
+ { title: 'BIBCAT Reporting Module',
+   slug: 'bibcat-reporting-module' },
+ { title: 'Colorado College Library Website',
+   slug: 'colorado-college-library-website' },
+ { title: 'Why? Why not!',
+   slug: 'why-why-not' },
+ { title: 'Participating',
+   slug: 'participating' },
+ { title: 'Thank-you',
+   slug: 'thank-you' }
 ];
 
 
@@ -52,6 +66,11 @@ var slides = [
       $scope.currentSlide += 1;
       $scope.slideTitle = slides[$scope.currentSlide-1]['title'];
       $scope.countdown -= 18;
+      var slug = slides[$scope.currentSlide-1]['slug'];
+      var body_key = '#' + slug + '-body';
+      $('#'+slug).removeClass('hidden');
+      $('#'+slug).addClass('show');
+      $(body_key).addClass('in');
      };
 
      $scope.isActive = function(slide_number) {
