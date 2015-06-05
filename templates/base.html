@@ -1,35 +1,34 @@
 <!doctype html>
 <html ng-app="or2015App">
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.2/angular.min.js"></script>
+    {#<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.2/angular.min.js"></script>#}
         
     <script src="{{ url_for('static', filename='main.js') }}"></script>
     <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
   </head>
-  <body ng-controller="OR2015AppController as or2015" class="container">
+  <body id="or2015app" ng-controller="OR2015AppController as or2015" class="container">
     <header>
-    {% raw %}
     <h3>Open Repositories 2015 - Fedora Interest Group 3B: Hydra and Others </h3>
     <h2>Learning to use Fedora 4 as a BIBFRAME Linked Data Platform</h2>
-    <h1>Slide {{ currentSlide }} of {{ slideCount }}</h1>
-    <h1>{{ slideTitle }} 
-        <span class="countdown">{{ countdown }} seconds</span></h1>
-     
-    {% endraw %}
+    
+      <h1>Slide <span class="current_slide"></span> of 24<br>
+         <span class="countdown"></span> seconds left</h1>
     </header>
     <div class="">
 
     {% raw %}
     <div class="btn-group" role="group">
-      <button ng-click="startSlideShow()" class="btn btn-default">Start</button>
-      <button ng-click="showAllSlides()" class="btn btn-default">Show All</button>
+      <button onclick="startSlideShow()" class="btn btn-primary">Start</button>
+      <button onclick="showAllSlides()" class="btn btn-default">Show All</button>
     </div>
     {% endraw %}
      <br>
     </div>
-    <div id="slides" role="tablist" class="panel-group">
+    <div class="row">
+      <section class="col-md-11">
+       <div id="slides" role="tablist" class="panel-group">
     {% include 'slides/introduction.html' %}
     {% include 'slides/obligatory-shield-reference.html' %}
     {% include 'slides/language-frameworks-meh.html' %}
@@ -54,9 +53,69 @@
     {% include 'slides/why-why-not.html' %}
     {% include 'slides/participating.html' %}
     {% include 'slides/thank-you.html' %}
-    </div>
-    
+       </div>
+      </section>
+      <section class="col-md-1">
+        <nav class="hidden-print hidden-xs hidden-sm affix well well-sm">  
+          <h2><span class="countdown"></span><br>secs</h2>
+          <h3><span class="current_slide"></span> of 24</h3>
+        </nav>
+      </section>
+   </div>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+   <script>
+    var currentSlide = 1;
+    var countDown = 420;
+    $('.current_slide').html(currentSlide);
+    $('.countdown').html(countDown);
+
+    function startSlideShow() {
+        
+        var timer = setInterval(function() {
+          if(countDown == -1) {
+             clearInterval(timer); 
+          }
+          countDown--;
+          $('.countdown').html(countDown);     
+        }, 1000)
+        setTimeout(function() {
+          showSlide(slides[1]);
+          $(".current_slide").html(2);
+          }, 15000);
+    }
+
+    function showAllSlides() {
+      for(var i in slides) {
+         showSlide(slides[i]);
+      }
+    }
+
+
+    function showSlide(slide) {
+      var slug = slide['slug'];
+      var body_key = '#' + slug + '-body';
+      $('#'+slug).removeClass('hidden');
+      $('#'+slug).addClass('show');
+      $(body_key).addClass('in');
+    }
+
+
+   $(window).scroll(function() {
+    if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
+     //  catalog_view_model.loadResults();
+      if(currentSlide >= slides.length) {
+         return; 
+      }
+      showSlide(slides[currentSlide])
+      currentSlide += 1;
+      if(currentSlide <= slides.length) { 
+        $(".current_slide").html(currentSlide);
+      }
+
+    }
+   });
+
+   </script>
   </body>
 </html>

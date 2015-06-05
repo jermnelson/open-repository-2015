@@ -1,4 +1,4 @@
-<div class="panel panel-default" id="obligatory-shield-reference">
+<div class="panel panel-default hidden" id="obligatory-shield-reference">
     <div class="panel-heading" role="tab" id="obligatory-shield-reference-head">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#slides" href="#obligatory-shield-reference-body" 
@@ -12,13 +12,31 @@
        <h1>Obligatory <em>Agents of S.H.I.E.L.D.</em> Reference</h1>
        <h2>So when I heard this session's title* &hellip;</h2>
        <h2 class="text-center">&hellip; my thought went to this television show:</h2>
-       <img src="http://upload.wikimedia.org/wikipedia/en/6/6a/Agents_of_SHIELD_logo.jpg" class="img-thumbnail center-block">
-       <span class="text-center">
-        Source: <a href="http://en.wikipedia.org/wiki/File:Agents_of_SHIELD_logo.jpg#/media/File:Agents_of_SHIELD_logo.jpg" class="text-center">Wikipedia</a>.
-       </span>
+       <div class="row">  
+         <section class="col-md-4 col-md-offset-4">
+           <div class="thumbnail">
+            <img src="{{ url_for('static', filename='img/Agents_of_SHIELD_logo.jpg') }}" class="img-thumbnail center-block">
+            <div class="caption">
+             <h3>Source:</h2>
+             <p><a href="http://en.wikipedia.org/wiki/File:Agents_of_SHIELD_logo.jpg#/media/File:Agents_of_SHIELD_logo.jpg" 
+               class="text-center">Wikipedia</a>.<p>
+            </div>
+           </div>
+         </section>
+       </div>
        <h2 class="text-center">This isn't Yet Another Hydra Presentation&reg;</h2>
-       <img class="img-thumbnail center-block" 
-        src="http://vignette1.wikia.nocookie.net/agentsofshield/images/e/e2/HYDRA1.png/revision/latest/scale-to-width/250?cb=20140710041814">
+       <div class="row">
+        <section class="col-md-5 col-md-offset-3">
+         <div class="thumbnail">
+           <img src="{{ url_for('static', filename='img/hydra.png') }}" alt="Hydra Logo">
+           <div class="caption">
+            <h3>Source</h3>
+            <p>http://vignette1.wikia.nocookie.net/agentsofshield/</p>
+            </p>
+           </div>
+         </div>
+       </section>
+       </div>
        <h2>BUT</h2>
 	<h2>I am using a Python module called <a href="http://falconframework.org/">Falcon</a> for building REST APIs</h2>
         <div class="row">
@@ -29,7 +47,7 @@
              <span style="font-size: 5em; font-weight: bold">?<br>=</span>
           </section>
           <section class="col-md-4">
-             <img src="{{ url_for('static', filename='shield-logo.png') }}" class="img-thumbnail pull-left">
+             <img src="{{ url_for('static', filename='img/shield-logo.png') }}" class="img-thumbnail pull-left">
           </section>
         </div>
 	<h2 class="text-center">hmm &hellip;but no, too militaristic for my tastes</h2> 

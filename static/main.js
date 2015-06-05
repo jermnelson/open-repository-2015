@@ -25,7 +25,7 @@ var slides = [
  { title: 'Apache Fuskei',
    slug: 'apache-fuskei' },
  { title: 'Semantic Server REST API',
-   slug: 'semantic-server-api-to-linked-data-platform' },
+   slug: 'semantic-server-rest-api' },
  { title: 'BIBFRAME Datastore',
    slug: 'bibframe-datastore' },
  { title: 'BIBFRAME Datastore Services API',
@@ -49,40 +49,36 @@ var slides = [
 ];
 
 
+/*
+function OR2015AppController($scope) {
+   $scope.currentSlide = 1;
+   $scope.slideCount = slides.length;
+   $scope.slideTitle = slides[$scope.currentSlide-1]['title'];
+   $scope.countdown = 420;
+
+   $scope.showAllSlides = function() {
+      console.log("IN show all slides");
+
+   }
+
+   $scope.startSlideShow = function() {
+     console.log("in startSlideShow");
+
+   }
+}
+*/
+
 (function() {
   'use strict';
   
   angular.module('or2015App', [])
-   .controller('OR2015AppController', ['$scope', function($scope) {
+   .controller('OR2015AppController', ['$scope', '$timer', function($scope, $timer) {
      $scope.currentSlide = 1;
      $scope.slideCount = slides.length;
      $scope.slideTitle = slides[$scope.currentSlide-1]['title'];
      $scope.countdown = 420;
 
-     $scope.advanceSlide = function() {
-      if($scope.currentSlide >= $scope.slideCount) {
-          clearInterval();
-          return;
-      }
-      $scope.currentSlide += 1;
-      $scope.slideTitle = slides[$scope.currentSlide-1]['title'];
-      $scope.countdown -= 18;
-      var slug = slides[$scope.currentSlide-1]['slug'];
-      var body_key = '#' + slug + '-body';
-      $('#'+slug).removeClass('hidden');
-      $('#'+slug).addClass('show');
-      $(body_key).addClass('in');
-     };
-
-     $scope.isActive = function(slide_number) {
-       if(slide_number === $scope.currentSlide) {
-         return true;
-       }
-       return false;
-     };
-
      $scope.startSlideShow = function() {
-         setInterval($scope.advanceSlide, 18000);
      }
 
      $scope.showAllSlides = function() {
@@ -105,6 +101,7 @@ var slides = [
      };
 */
    }])
+});
 
+ 
 
-}());
