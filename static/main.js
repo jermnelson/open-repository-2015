@@ -4,14 +4,14 @@ var slides = [
    slug: 'obligatory-shield-reference'},
  { title: 'Language, Frameworks, Meh!',
    slug: 'language-frameworks-meh' },
+ { title: 'Catalog Pull Platform',
+   slug: 'catalog-pull-platform' },
  { title: 'Connecting People and Institutions with Algorithms',
    slug: 'connecting-people-and-institutions-with-algorithms' },
  { title: 'Traditional Push Processes',
    slug: 'traditional-push-processes' },
  { title: 'Pulling Requirements',
    slug: 'pulling-requirements' },
- { title: 'Catalog Pull Platform',
-   slug: 'catalog-pull-platform' },
  { title: 'Semantic Server API to Linked Data Platform',
    slug: 'semantic-server-api-to-linked-data-platform' },
  { title: 'Fedora 4 for Named Graphs',
@@ -61,6 +61,7 @@ var slides = [
 
      $scope.advanceSlide = function() {
       if($scope.currentSlide >= $scope.slideCount) {
+          clearInterval();
           return;
       }
       $scope.currentSlide += 1;
@@ -79,6 +80,17 @@ var slides = [
        }
        return false;
      };
+
+     $scope.startSlideShow = function() {
+         setInterval($scope.advanceSlide, 18000);
+     }
+
+     $scope.showAllSlides = function() {
+       for(var i in slides) {
+          var slide = slides[i];
+          $('#' + slide['slug']).removeClass('hidden');
+       }
+     }
 /*
      for(var i; i<=slides.length; i++) {     
         var slide = slides[i];
