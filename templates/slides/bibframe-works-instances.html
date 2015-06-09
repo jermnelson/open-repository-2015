@@ -4,7 +4,7 @@
         <a data-toggle="collapse" data-parent="#slides" href="#bibframe-works-instances-body" aria-expanded="true" 
           aria-controls="bibframe-works-instances-body">BIBFRAME Works &amp; Instances</a>
 
-        <span class="badge pull-right">10/24</span> 
+        <span class="badge pull-right">9/24</span> 
       </h3>
     </div>
     <div id="bibframe-works-instances-body" class="panel-collapse collapse" role="tabpanel" aria-labelledby="bibframe-works-instances-head">
@@ -14,6 +14,64 @@
           <section class="col-md-4">
             <img src="{{ url_for('static', filename='img/bf-work-instance.png') }}">
           </section>
+          <article class="col-md-8">
+            <p class="lead">In the BIBFRAME Datastore, RDF graphs for 
+            <a href="http://bibframe.org/vocab/Work">Work</a>s and
+            <a href="http://bibframe.org/vocab/Instance">Instances</a>. As an 
+            abstract representation of the conceptual essence of a resource, a 
+            BIBFRAME Work for Lewis Carroll's <em>Alice in Wonderland</em>:
+            <table class="table">
+              <tr>
+               <th>Work URI</th>
+               <th>Predicate</th>
+               <th>Object</th>
+              </tr>
+              <tr>
+               <td rowspan="5">
+                 &lt;http://catalog.coloradocollege.edu/3417443&gt;
+               </td>
+               <td>rdf:type</td>
+               <td>bf:Text<br>bf:Work</td>
+              </tr>
+              <tr>
+                <td>bf:authorizedAccessPoint</td>
+                <td>"Carroll, Lewis, 1832-1898. Alice's adventures in wonderland 
+                    :and Through the looking-glass"</td>
+              </tr>
+              <tr>
+                <td>bf:creator</td>
+                <td>&lt;http://catalog.coloradocollege.edu/3417443person6&gt;</td>
+              </tr>
+              <tr>
+                <td>bf:language</td>
+                <td>&lt;http://id.loc.gov/vocabulary/languages/eng&gt;</td>
+              </tr>
+            </table>
+            <p class="lead">BIBFRAME Instance are </p>
+            <table class="table">
+              <tr>
+               <th>Instance URI</th>
+               <th>Predicate</th>
+               <th>Object</th>
+              </tr>
+              <tr>
+               <td rowspan="5">
+                &lt;http://catalog.coloradocollege.edu/3417443instance13&gt;
+               </td>
+               <td>rdf:type</td>
+               <td>bf:Instance<br>bf:Monograph</td>
+              </tr>
+              <tr>
+               <td>bf:providerStatement</td>
+               <td>"New York : Illustrated Editions Co. 19--?"</td>
+              </tr>
+              <tr>
+               <td>bf:instanceOf</td>
+               <td>&lt;http://catalog.coloradocollege.edu/3417443&gt;</td>
+              </tr>
+
+             </table>
+          </article>
         </div>
       </div>
     </div>

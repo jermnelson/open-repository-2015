@@ -1,3 +1,8 @@
+@font-face {
+  font-family('Josefin Slab');
+  src: url("../fonts/Josefin_Slab");
+}
+
 body {
   background-color: #591723;
   color: #B7ACA8;

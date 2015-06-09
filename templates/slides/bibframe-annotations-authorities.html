@@ -3,16 +3,74 @@
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#slides" href="#bibframe-annotations-authorities-body" 
            aria-expanded="true" aria-controls="bibframe-annotations-authorities-body">BIBFRAME Annotations & Authorities</a>
-        <span class="badge pull-right">11/24</span> 
+        <span class="badge pull-right">10/24</span> 
       </h4>
     </div>
     <div id="bibframe-annotations-authorities-body" class="panel-collapse collapse" role="tabpanel" aria-labelledby="bibframe-annotations-authorities-head">
       <div class="panel-body">
-        <h1>BIBFRAME Annotations & Authorities</h1>
+        <h1>BIBFRAME Annotations & Authorities</h1> 
         <div class="row">
-          <article class="col-md-7">
-
-
+          <article class="col-md-8">
+            <p class="lead">BIBFRAME Annotations are resources that assert additional information
+            for other BIBFRAME Annotations. These annotations may or may not be encoded in
+            the source MARC21.</p>  
+            <table class="table">
+              <tr>
+               <th>Annotation URI</th>
+               <th>Predicate</th>
+               <th>Object</th>
+              </tr>
+              <tr>
+               <td rowspan="5">
+                 &lt;http://catalog.coloradocollege.edu/3417443CoverArt&gt;
+               </td>
+               <td>
+                  rdf:type
+               </td>
+               <td>
+                  bf:CoverArt<br>bf:Annotation
+               </td>
+              </tr>              
+              <tr>
+               <td>bf:coverArt</td>
+               <td>
+                &lt;http://catalog.coloradocollege.edu/3417443instance13&gt;
+               </td> 
+              </tr>
+              <tr>
+               <td>bf:coverArtFor</td>
+               <td> &lt;http://catalog.coloradocollege.edu/3417443instance13&gt;</td>
+              </tr>
+            </table>
+           <p class="lead">
+            BIBFRAME Authorities are resources that represent concepts or things that
+            have key relationships with other BIBFRAME Resources.
+           </p>
+            <table class="table">
+              <tr>
+               <th>Authority URI</th>
+               <th>Predicate</th>
+               <th>Object</th>
+              </tr>
+              <tr>
+               <td rowspan="5">
+                 &lt;http://catalog.coloradocollege.edu/3417443person6&gt; 
+               </td>
+               <td>
+                 rdf:type
+               </td>
+               <td>
+                 bf:Person
+               </td>
+              </tr>
+              <tr>
+                <td>bf:authorizedAccessPoint</td>
+                <td>Carroll, Lewis, 1832-1898.</td>
+              </tr>
+              <tr>
+               
+              </tr>
+            </table>
           </article>
           <section class="col-md-4">
              <img src="{{ url_for('static', filename='img/bf-authority-annotations.png') }}">
