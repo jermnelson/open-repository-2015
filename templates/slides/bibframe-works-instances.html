@@ -10,6 +10,11 @@
     <div id="bibframe-works-instances-body" class="panel-collapse collapse" role="tabpanel" aria-labelledby="bibframe-works-instances-head">
       <div class="panel-body">
         <h1>BIBFRAME Works &amp; Instances</h1>
+       <p class="lead">Using the Semantic Server has allowed me to experiment with different Linked-Data 
+       vocabularies but given my interest on library data, I've been mostly interested in two; 
+       <a href="http://schema.org">schema.org</a> and <a href="http://bibframe.org">BIBFRAME</a>, with 
+       most of my development work for the past few years focusing on the BIBFRAME, the Library of Congress
+       replacement for MARC.</p>
         <div class="row">
           <section class="col-md-4">
             <img src="{{ url_for('static', filename='img/bf-work-instance.png') }}">
@@ -17,8 +22,10 @@
           <article class="col-md-8">
             <p class="lead">In the BIBFRAME Datastore, RDF graphs for 
             <a href="http://bibframe.org/vocab/Work">Work</a>s and
-            <a href="http://bibframe.org/vocab/Instance">Instances</a>. As an 
-            abstract representation of the conceptual essence of a resource, a 
+            <a href="http://bibframe.org/vocab/Instance">Instances</a> are broken out into 
+            subject graphs that are ingested into Fedora, Fuseki, and then indexed in Elasticsearch. 
+            Work is defined as "As an 
+            abstract representation of the conceptual essence of a resource". Here is partial example of 
             BIBFRAME Work for Lewis Carroll's <em>Alice in Wonderland</em>:
             <table class="table">
               <tr>

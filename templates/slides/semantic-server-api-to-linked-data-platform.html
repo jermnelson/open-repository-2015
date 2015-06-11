@@ -29,8 +29,11 @@
           <p class="lead">
             The semantic server attempts to abstract the underlying search, 
             preservation, and triple-stores functionality with a REST API
-            for client applications. 
+            for client applications. In the near feature we'll be refactoring the 
+            Semantic Server to remove functionality, particularly the Fedora-Fuseki-Elasticsearch
+            integration code, and move to using Apache Camel. 
           </p>
+          <img src="{{ url_for('static', filename='img/apache-camel-7.png') }}" class="img-thumbnail float-right">
           <p class="lead">
             The semantic server source code is available at 
             <a href="https://github.com/jermnelson/semantic-server.git">
@@ -39,6 +42,6 @@ https://github.com/jermnelson/semantic-server.git
           </p>
         </article>
        </div>
-      </div>
+     </div>
     </div>
  </div>

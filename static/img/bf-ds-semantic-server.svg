@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="640px"
+   height="480px"
+   id="svg3040"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="New document 1">
+  <defs
+     id="defs3042" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.77472527"
+     inkscape:cx="320"
+     inkscape:cy="240"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:window-width="685"
+     inkscape:window-height="567"
+     inkscape:window-x="20"
+     inkscape:window-y="20"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata3045">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <path
+       sodipodi:type="arc"
+       style="fill:#000127;fill-opacity:0;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3048"
+       sodipodi:cx="269.12766"
+       sodipodi:cy="203.77304"
+       sodipodi:rx="173.60992"
+       sodipodi:ry="94.226952"
+       d="m 442.73758,203.77304 a 173.60992,94.226952 0 1 1 -347.219849,0 173.60992,94.226952 0 1 1 347.219849,0 z" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#b10127;fill-opacity:0;stroke:#000000;stroke-width:2.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3050"
+       sodipodi:cx="259.44681"
+       sodipodi:cy="270.24823"
+       sodipodi:rx="147.14894"
+       sodipodi:ry="92.290779"
+       d="m 406.59575,270.24823 a 147.14894,92.290779 0 1 1 -294.29788,0 147.14894,92.290779 0 1 1 294.29788,0 z"
+       transform="matrix(1.2262242,0,0,1.9089299,-53.530028,-278.9402)" />
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Verdana;-inkscape-font-specification:Verdana"
+       x="138.11346"
+       y="161.17731"
+       id="text3820"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3822"
+         x="138.11346"
+         y="161.17731">BIBFRAME datastore</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#b10127;fill-opacity:0;stroke:#000000;stroke-width:2.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3824"
+       sodipodi:cx="289.78015"
+       sodipodi:cy="321.87943"
+       sodipodi:rx="75.510635"
+       sodipodi:ry="79.38298"
+       d="m 365.29079,321.87943 a 75.510635,79.38298 0 1 1 -151.02127,0 75.510635,79.38298 0 1 1 151.02127,0 z" />
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Verdana;-inkscape-font-specification:Verdana"
+       x="240.08511"
+       y="308.32623"
+       id="text3826"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3828"
+         x="240.08511"
+         y="308.32623">Semantic</tspan><tspan
+         sodipodi:role="line"
+         x="240.08511"
+         y="338.32623"
+         id="tspan3830">Server</tspan></text>
+  </g>
+</svg>
