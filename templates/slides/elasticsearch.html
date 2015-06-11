@@ -12,9 +12,64 @@
        <h1>Elasticsearch</h1>
        <img src="{{ url_for('static', filename='img/elastic-search-logo.png') }}" class="img-thumbnail pull-right">
        <p class="lead">
-
-
+        For search and access we are using 
+        <a href="https://www.elastic.co/products/elasticsearch">Elasticsearch</a> using 
+        modified JSON-Linked Data that is serialized from the BIBFRAME entity stored in
+        Fedora. To link Fedora and Elasticsearch we are using the <code>fedora:uuid</code>
+        as the document id and the Fedora URL.  
        </p>
+       <p class="lead">
+        Here is an Elastic Search search result for a BIBFRAME Work:
+       </p>
+       <div class="row">
+       <section class="col-md-9">
+       <pre>
+{
+  "_id": "1d27422d-1cc3-4f65-a405-6fe53b7590f8",
+  "_index": "bibframe",
+  "_score": 1.3480984,
+  "_source": {
+    "bf:authorizedAccessPoint": [
+      "Mark Twain journal."
+    ],
+    "bf:title": [
+      "Mark Twain journal."
+    ],
+    "fedora:created": [
+      "2015-05-19T19:59:57.326000+00:00"
+    ],
+    "fedora:hasLocation": [
+      "http://localhost:8080/rest/80/8b/59/46/808b5946-e689-41c6-bdbb-592f0cba5fd5"
+    ],
+    "fedora:lastModified": [
+      "2015-05-19T20:00:04.528000+00:00"
+    ],
+    "fedora:uuid": [
+      "1d27422d-1cc3-4f65-a405-6fe53b7590f8"
+    ],
+    "type": [
+      "bf:Work"
+    ],
+    "work_suggest": {
+      "input": [
+        "Mark Twain journal."
+      ],
+      "output": "Mark Twain journal.",
+      "payload": {
+        "id": "1d27422d-1cc3-4f65-a405-6fe53b7590f8"
+      }
+    }
+  },
+  "_type": "Work"
+}
+     </pre>
+     </section>
+     <section class="col-md-3">
+     <div class="alert alert-warning" role="alert">
+      <strong>Warning!</strong> Do not leave your Elasticsearch port 
+      open to the wider web. Bad things can happen!
+     </div>
+     </section>
       </div>
     </div>
  </div>

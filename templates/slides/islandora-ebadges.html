@@ -2,7 +2,7 @@
     <div class="panel-heading" role="tab" id="islandora-ebadges-head">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#slides" 
-           href="#islandora-ebadges-body" aria-expanded="true" aria-controls="islandora-ebadges-body">Islandora eBadges</a>
+           href="#islandora-ebadges-body" aria-expanded="true" aria-controls="islandora-ebadges-body">Islandora OpenBadges</a>
            <span class="badge pull-right">19/24</span>
         </a>
       </h3>
@@ -10,8 +10,11 @@
     <div id="islandora-ebadges-body" class="panel-collapse collapse" role="tabpanel" aria-labelledby="islandora-ebadges-head">
       <div class="panel-body">
        <h1>Islandora eBadges</h1>
+       <img src="{{ url_for('static', filename='img/islandora-badges.png') }}" 
+            class="img-thumbnail pull-right">
        <p class="lead">
-         A Flask application being developed for the Islandora.ca foundation to issue  Mozilla 
+         A Flask application that started off as a project for the Islandora.ca foundation 
+         to issue  Mozilla 
          <a href="http://openbadges.org/ ">Open Badges</a> (as mentioned by #OR2015 keynote 
          speaker) for camps, special projects, and other types of educational and 
          training events. Badge information and individually 

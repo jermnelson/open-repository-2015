@@ -9,6 +9,27 @@
     <div id="semantic-server-rest-api-body" class="panel-collapse collapse" role="tabpanel" aria-labelledby="semantic-server-rest-api-head">
       <div class="panel-body">
         <h1>Semantic Server REST API</h1>
+        <p class="lead">The semantic server's primary function is providing 
+        a REST API that hides the specific implementation details from other 
+        applications that may need to interact with BIBFRAME Datastore or other 
+        bibliographic and technological systems that extend the Semantic Server REST API. 
+        This open-source project is 
+        available on Github at 
+        <a href="https://github.com/jermnelson/semantic-server">https://github.com/jermnelson/semantic-server</a>.
+        </p>
+        <img src='{{ url_for("static", filename="img/falcon.png") }}' class="pull-right img-thumbnail">
+        <p class="lead">The semantic server's REST API uses an open-source project called 
+        <a href="">Falcon</a>, a Python-based framework for creating cloud-based REST 
+        APIs, initially developed and continued sponsorship by Rackspace. 
+        </p>
+        <p class="lead">
+          For the Fedora Four repository, the semantic server implements a <em>Resource</em>
+          class with methods that map to the standard GET, POST, PATCH, DELETE HTTP methods. 
+          The calling client to retrieve the RDF graph of the resource  with a GET call, 
+          create a new Fedora container, ingests into Fuseki, and indexed into 
+          Elasticsearch with a single POST call, update the RDF graph with a PATCH, and remove
+          the resource with a DELETE http method.  
+        </p>
       </div>
     </div>
  </div>

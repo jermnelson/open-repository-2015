@@ -10,6 +10,33 @@
     <div id="apache-fuskei-body" class="panel-collapse collapse" role="tabpanel" aria-labelledby="apache-fuskei-head">
       <div class="panel-body">
        <h1>Apache Fuskei</h1>
+       <p class="lead">A proper SPARQL endpoint is essential for working with Fedora as a Linked
+       Data Platform. The current version of the catalog pull platform uses Apache Foundation 
+       <a href="">Fuskei</a> project for SPARQL queries. The primary use of SPARQL is for 
+       ingestion and reporting needs for the project.</p>
+       <p class="lead">For example, when ingesting BIBFRAME Works, Titles, Person, and 
+        Organization, we are doing a rough deduplication based on the following entity
+        properties: 
+        <strong>bf:authorizedAccessPoint</strong>,  
+         <strong>bf:identifierValue</strong>,
+         <strong>bf:classificationNumber</strong>,
+         <strong>bf:label</strong>, 
+         <strong>bf:titleValue</strong>. We use a SPARQL query similar to
+        this:</p>
+       <div class="row">
+         <section class="col-md-7">
+         <pre>
+PREFIX bf: <http://bibframe.org>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?subject 
+WHERE {
+   ?subject bf:authorizedAccessPoint "Mark Twain journal."^^xsd:string .
+   ?subject rdf:type bf:Work .
+}
+         </pre>
+         </section>
+       <div>
       </div>
     </div>
  </div>
