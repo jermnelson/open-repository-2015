@@ -24,8 +24,8 @@
       <button onclick="showAllSlides()" class="btn btn-default">Show All</button>
     </div>
     {% endraw %}
-     <br>
     </div>
+    <br>
     <div class="row">
       <section class="col-md-11">
        <div id="slides" role="tablist" class="panel-group">
@@ -79,10 +79,10 @@
           countDown--;
           $('.countdown').html(countDown);     
         }, 1000)
-        setTimeout(function() {
+        /*setTimeout(function() {
           showSlide(slides[1]);
           $(".current_slide").html(2);
-          }, 15000);
+          }, 15000);*/
     }
 
     function showAllSlides() {
@@ -107,7 +107,8 @@
       if(currentSlide >= slides.length) {
          return; 
       }
-      showSlide(slides[currentSlide])
+      showSlide(slides[currentSlide]);
+      console.log("Current slide " + currentSlide);
       currentSlide += 1;
       if(currentSlide <= slides.length) { 
         $(".current_slide").html(currentSlide);
